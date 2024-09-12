@@ -1,0 +1,5 @@
+services:
+  render:
+    image: spa-render:latest
+    ports:
+      - 3000:3000
