@@ -1,7 +1,5 @@
 const prerender = require('prerender');
 
-const CHROME_LOCATION = process.env.CHROME_LOCATION || '/usr/bin/chromium';
-
 const server = prerender({
   chromeLocation: '/usr/bin/chromium',
   logRequests: true,
@@ -10,5 +8,4 @@ const server = prerender({
 });
 server.use(require('./plugins/blockResources'));
 server.use(require('./plugins/removeScriptTags'));
-server.use(require('prerender-memory-cache'));
 server.start();
