@@ -6,6 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "prerender": "^5.21.6"
+    "express": "^4.21.0",
+    "playwright": "^1.47.1"
   }
 }
