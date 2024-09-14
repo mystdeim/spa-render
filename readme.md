@@ -1,9 +1,8 @@
 # SPA RENDER
 
 ## Tech stack
-- https://github.com/prerender/prerender
-- https://github.com/prerender/prerender-memory-cache
-- https://github.com/freeletics/prerender-chrome/tree/master
+- playwright
+- chromium
 
 ## Docker
 ```shell
