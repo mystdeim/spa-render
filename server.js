@@ -82,7 +82,37 @@ app.post('/render', async (req, res) => {
 app.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
   browser = await chromium.launch({
-    headless: true
+    headless: true,
+    args: [
+      '--disable-gpu',
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--disable-web-security',
+      '--disable-features=IsolateOrigins,site-per-process',
+      '--disable-site-isolation-trials',
+      '--disable-background-networking',
+      '--disable-background-timer-throttling',
+      '--disable-backgrounding-occluded-windows',
+      '--disable-breakpad',
+      '--disable-client-side-phishing-detection',
+      '--disable-component-update',
+      '--disable-default-apps',
+      '--disable-domain-reliability',
+      '--disable-extensions',
+      '--disable-features=TranslateUI',
+      '--disable-hang-monitor',
+      '--disable-ipc-flooding-protection',
+      '--disable-popup-blocking',
+      '--disable-prompt-on-repost',
+      '--disable-renderer-backgrounding',
+      '--disable-sync',
+      '--force-color-profile=srgb',
+      '--metrics-recording-only',
+      '--no-first-run',
+      '--safebrowsing-disable-auto-update'
+    ]
   });
   console.log('Browser launched');
 });
